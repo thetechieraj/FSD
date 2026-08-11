@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            border: 1px solid #ddd;
+        }
+
+        /* Header */
+
+        .header {
+            height: 100px;
+            background-color: #00ff00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+
+        .nav {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            height: 100px;
+        }
+
+        .nav a {
+            background-color: pink;
+            border-right: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .nav a:last-child {
+            border-right: none;
+        }
+
+        .nav a:hover {
+            background-color: #f28ca0;
+        }
+
+        /* Main Content */
+
+        .main {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            height: 500px;
+        }
+
+        .notification {
+            background-color: #ffd700;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .notification marquee {
+            width: 100%;
+        }
+
+        .form-section {
+            background-color: #c0c0c0;
+            padding: 30px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+
+        .footer {
+            height: 100px;
+            background-color: green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Form */
+
+        form {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 250px;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        button {
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            Header Section
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact US</a>
+            <a href="#">Login</a>
+        </div>
+
+        <!-- Main Section -->
+        <div class="main">
+
+            <!-- Marquee -->
+            <div class="notification">
+                <marquee direction="up" behavior="scroll">
+                    Show notification in marquee tag
+                </marquee>
+            </div>
+
+            <!-- Form Section -->
+            <div class="form-section">
+                Form Section
+
+                <form>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name">
+                    <br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email">
+                    <br>
+
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message"></textarea>
+                    <br>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Footer Section
+        </div>
+
+    </div>
+
+</body>
+
+</html>
