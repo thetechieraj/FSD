@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #fff;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 28px;
+        }
+
+        .form-box {
+            width: min(1050px, 95vw);
+            min-height: 760px;
+            border: 1px solid #777;
+            padding: 24px 34px 28px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 29px;
+            margin: 0 0 62px;
+            font-weight: bold;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin: 0 0 20px;
+            min-height: 35px;
+        }
+
+        label.title {
+            width: 200px;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        select,
+        textarea {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            border: 1px solid #999;
+            padding: 5px 8px;
+            background: #fafafa;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"] {
+            width: 220px;
+            height: 32px;
+        }
+
+        .inline-group {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+            font-size: 20px;
+        }
+
+        .inline-group label {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            white-space: nowrap;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: 19px;
+            height: 19px;
+            margin: 0;
+        }
+
+        select {
+            width: 205px;
+            height: 32px;
+        }
+
+        .bio-row {
+            align-items: flex-start;
+            margin-top: 5px;
+        }
+
+        textarea {
+            width: 390px;
+            height: 145px;
+            resize: both;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 34px;
+            margin-left: 110px;
+        }
+
+        button {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 2px 7px;
+            margin: 0 2px;
+            color: #333;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 12px;
+            }
+
+            .form-box {
+                padding: 20px;
+                min-height: auto;
+            }
+
+            h1 {
+                margin-bottom: 35px;
+            }
+
+            .row {
+                flex-wrap: wrap;
+            }
+
+            label.title {
+                width: 100%;
+                margin-bottom: 7px;
+            }
+
+            .buttons {
+                margin-left: 0;
+            }
+
+            textarea {
+                width: min(390px, 100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-box">
+
+        <h1>Registration Form</h1>
+
+        <form onsubmit="event.preventDefault(); alert('Form submitted!');">
+
+            <!-- First Name -->
+            <div class="row">
+                <label class="title" for="firstName">First Name :</label>
+                <input
+                    id="firstName"
+                    type="text"
+                    placeholder="Enter First Name"
+                >
+            </div>
+
+            <!-- Last Name -->
+            <div class="row">
+                <label class="title" for="lastName">Last Name :</label>
+                <input
+                    id="lastName"
+                    type="text"
+                    placeholder="Enter Last Name"
+                >
+            </div>
+
+            <!-- Email -->
+            <div class="row">
+                <label class="title" for="email">Email :</label>
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Enter Email Address"
+                >
+            </div>
+
+            <!-- Password -->
+            <div class="row">
+                <label class="title" for="password">Password :</label>
+                <input
+                    id="password"
+                    type="password"
+                >
+            </div>
+
+            <!-- Gender -->
+            <div class="row">
+                <label class="title">Gender:</label>
+
+                <div class="inline-group">
+                    <label>
+                        <span>Male</span>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="male"
+                        >
+                    </label>
+
+                    <label>
+                        <span>Female</span>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="female"
+                        >
+                    </label>
+
+                    <label>
+                        <span>Other</span>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="other"
+                        >
+                    </label>
+                </div>
+            </div>
+
+            <!-- Age -->
+            <div class="row">
+                <label class="title" for="age">Age :</label>
+                <input
+                    id="age"
+                    type="number"
+                    min="0"
+                >
+            </div>
+
+            <!-- Preferences -->
+            <div class="row">
+                <label class="title">Preferences:</label>
+
+                <div class="inline-group">
+                    <label>
+                        <span>Acrylic Painting</span>
+                        <input
+                            type="checkbox"
+                            name="preferences"
+                            value="acrylic"
+                        >
+                    </label>
+
+                    <label>
+                        <span>Oil Painting</span>
+                        <input
+                            type="checkbox"
+                            name="preferences"
+                            value="oil"
+                        >
+                    </label>
+
+                    <label>
+                        <span>Water Color Painting</span>
+                        <input
+                            type="checkbox"
+                            name="preferences"
+                            value="watercolor"
+                        >
+                    </label>
+                </div>
+            </div>
+
+            <!-- Occupation -->
+            <div class="row">
+                <label class="title" for="occupation">Occupation :</label>
+
+                <select id="occupation">
+                    <option>Student</option>
+                    <option>Teacher</option>
+                    <option>Artist</option>
+                    <option>Business</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <!-- Bio -->
+            <div class="row bio-row">
+                <label class="title" for="bio">Bio:</label>
+
+                <textarea
+                    id="bio"
+                    placeholder="Enter some info about yourself..."
+                ></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button type="reset">RESET</button>
+                <button type="submit">SUBMIT</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
